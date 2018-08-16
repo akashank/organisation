@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="address" class="capgemini.address" p:Line1="boys hostel"
+		p:Line2="bms" p:City="bangalore" p:State="karnataka" p:Country="india"
+		p:pincode="111111">
+	</bean>
+
+	<bean id="org" class="capgemini.organisation"
+		p:Name="ankit"
+		p:Address="mumbai"
+		p:MarketValue="500"
+		p:Established="1956"
+		p:employeeCount="100">
+
+		<property name="globalPresence">
+			<set>
+				<value>India</value>
+				<value>pakistan</value>
+				<value>France</value>
+				<value>North America</value>
+			</set>
+
+		</property>
+
+		<property name="boardMembers">
+			<list>
+				<value>ABD</value>
+				<value>ABY</value>
+				<value>ABE</value>
+				<value>ABC</value>
+
+			</list>
+		</property>
+
+		<property name=" projectManager ">
+			<map>
+				<entry key="key 1" value="revon"></entry>
+				<entry key="key 2" value="silva"></entry>
+				<entry key="key 3" value="lokesh"></entry>
+				<entry key="key 4" value="ankit"></entry>
+			</map>
+		</property>
+
+		<property name="proxyServerList">
+			<map>
+				<entry key="key 1" value="162.22.33.2"></entry>
+				<entry key="key 2" value="162.22.45.2"></entry>
+				<entry key="key 3" value="162.55.33.2"></entry>
+				<entry key="key 4" value="152.22.33.2"></entry>
+
+			</map>
+		</property>
+
+	</bean>
+</beans>
